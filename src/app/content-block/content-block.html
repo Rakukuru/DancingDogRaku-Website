@@ -1,0 +1,19 @@
+<div class="block">
+    <h1>{{title()}}</h1>
+    <img class="decorator" [src]="'decorators/border' + decorator() + '.png'" alt="Futuristic title decorator 1"/>
+    <div
+        class="content"
+        [class.has-image]="image()"
+        [class.image-left]="imagePosition() === 'left'"
+    >
+        <ng-content select="p,article"/>
+
+        @if (image(); as imageSource) {
+            <img
+                class="content-image"
+                [src]="imageSource"
+                [class.image-left]="imagePosition() === 'left'"
+            />
+        }
+    </div>
+</div>

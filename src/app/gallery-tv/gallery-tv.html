@@ -1,0 +1,40 @@
+<div class="gallery-wrapper">
+  <!--<img class="background" src="drawings/Fondo tele2.png" alt="Fondo tele2 background" />-->
+
+    <div class="decorator-container">
+        <h1 class="decorator-text">Gallery</h1>
+        <img class="decorator" src="drawings/Tele sin fondo2.png" alt="Decorator overlay" />
+        
+        <ngb-carousel #galleryCarousel="ngbCarousel" class="carousel carousel-fade" [showNavigationIndicators]="false" [showNavigationArrows]="false">
+            @for(image of images; track image.id){
+                <ng-template ngbSlide>
+                    <img
+                        [src]="image.src"
+                        [alt]="image.alt"
+                        (click)="openLightbox(image.id)"
+                    />
+                </ng-template>
+            }
+        </ngb-carousel>
+
+        <div class="carousel-controls">
+            <button class="carousel-button prev" type="button" aria-label="Previous slide" (click)="goPrev()">←</button>
+            <button class="carousel-button next" type="button" aria-label="Next slide" (click)="goNext()">→</button>
+        </div>
+  </div>
+
+  @if(lightboxVisible){
+      <div class="lightbox-overlay" (click)="closeLightbox()">
+          <div class="lightbox-content" (click)="$event.stopPropagation()">
+              <button class="lightbox-close" type="button" aria-label="Close" (click)="closeLightbox()">×</button>
+              <img [src]="currentImage.src" [alt]="currentImage.alt" />
+              <figcaption>{{currentImage.credits}}</figcaption>
+              <div class="lightbox-controls">
+                  <button class="carousel-button prev" type="button" aria-label="Previous image" (click)="lightboxPrev($event)">←</button>
+                  <button class="carousel-button next" type="button" aria-label="Next image" (click)="lightboxNext($event)">→</button>
+              </div>
+          </div>
+      </div>
+  }
+
+</div>

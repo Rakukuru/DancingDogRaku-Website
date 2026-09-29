@@ -1,0 +1,87 @@
+<div class="hero">
+
+  <svg viewBox="0 0 19 8" preserveAspectRatio="none" class="hero-mask">
+    <defs>
+      <linearGradient id="heroGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="var(--bg-color)" />
+        <stop offset="40%" stop-color="var(--bg-color-secondary)" />
+        <stop offset="80%" stop-color="var(--bg-color-tertiary)" />
+        <stop offset="100%" stop-color="var(--bg-color-quaternary)" />
+      </linearGradient>
+
+      <filter id="heroShadow">
+        <feDropShadow dx="0" dy="0.3" stdDeviation="0.2" flood-opacity="0.3" />
+      </filter>
+    </defs>
+
+    <path
+      class="hero-shape"
+      d="M 0 -2 L 19 -2 V 4 C 18 2 15 1 10 1 C 4 1 1 2 0 4 Z"
+      fill="url(#heroGradient)"
+      filter="url(#heroShadow)"
+    />
+  </svg>
+
+  <svg viewBox="0 0 19 8" preserveAspectRatio="none" class="hero-mask">
+    <defs>
+      <linearGradient id="heroGradient2" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%" stop-color="var(--bg-color)" />
+        <stop offset="40%" stop-color="var(--bg-color-secondary)" />
+        <stop offset="80%" stop-color="var(--bg-color-tertiary)" />
+        <stop offset="100%" stop-color="var(--bg-color-quaternary)" />
+      </linearGradient>
+
+      <filter id="heroShadow2">
+        <feDropShadow dx="0" dy="-0.3" stdDeviation="0.2" flood-opacity="0.3" />
+      </filter>
+    </defs>
+
+    <path
+      class="hero-shape"
+      d="M 0 10 L 19 10 V 4 C 18 7 15 7 15 7 L 4 7 C 4 7 1 7 0 4 Z"
+      fill="url(#heroGradient2)"
+      filter="url(#heroShadow2)"
+    />
+  </svg>
+
+  <!------------------------------------->
+  <div class="carousel-container">
+    <!-- Angular carousel here -->
+    <ngb-carousel [showNavigationIndicators]="false">
+    @for(image of images; track image.id){
+      <ng-template ngbSlide>
+          <img
+              [ngSrc]="image.src"
+              [alt]="image.alt"
+              width="100" height="80" priority
+          />
+      </ng-template>
+    }
+    </ngb-carousel>
+  </div>
+  <!------------------------------------->
+  <div class="carousel-over-text-div">
+    <h1>Welcome to DancingDogRaku's website</h1>
+  </div>
+
+  <div class="carousel-socials">
+    <div class="cercle">
+      <button class="youtube" aria-label="YouTube"></button>
+    </div>
+    <div class="cercle">
+      <button class="instagram" aria-label="Instagram"></button>
+    </div>
+    <div class="cercle">
+      <button class="bluesky" aria-label="BlueSky"></button>
+    </div>
+    <div class="cercle">
+      <button class="telegram" aria-label="Telegram"></button>
+    </div>
+    <div class="cercle">
+      <button class="github" aria-label="GitHub"></button>
+    </div>
+  </div>
+
+  <div class="separator">
+  </div>
+</div>

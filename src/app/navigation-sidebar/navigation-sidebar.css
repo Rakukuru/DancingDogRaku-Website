@@ -1,0 +1,77 @@
+.sidebar-shell {
+  position: fixed;
+  right: 20px; 
+  top: 50%; /* Siderbar starts in the middle and pans downwards */
+  z-index: 1000; /* ALWAYS on top */
+}
+
+.side-nav {
+  position: relative;
+  transform: translateY(-50%); /*Move it further up to keep it centered*/
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 12px;
+  border-radius: 12px;
+
+  background: var(--nav-bg);
+  backdrop-filter: blur(8px);
+
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Move 100% of own width + 20px to the right. Also moves vertically up by half of it's height*/
+.side-nav.is-collapsed {
+  transform: translate(calc(100% + 20px), -50%);
+}
+
+
+@media (min-width: 978px) {
+  .side-nav {
+    font-size: 1.2rem;
+  }
+}
+
+.side-nav:hover {
+  transform: translateY(-50%) scale(1.15);
+}
+
+/*Do not make bigger when the button is collapsed! */
+.side-nav.is-collapsed:hover {
+  transform: translate(calc(100% + 20px), -50%);
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 50%;
+  left: -38px;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 60px;
+  border: 0;
+  border-radius: 8px 0 0 8px;
+  background: var(--nav-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.25);
+}
+
+.sidebar-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.side-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}

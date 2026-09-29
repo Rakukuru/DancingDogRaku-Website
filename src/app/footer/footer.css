@@ -1,0 +1,110 @@
+.footer-wrapper a {
+  color: var(--accent-color);
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--accent-color2);
+    padding: 1% 15%;
+    width: 100%;
+}
+
+.footer-about {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-navigation {
+    margin: 20px;
+    margin-left: 0px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.footer-navigation a {
+    text-decoration: none;
+}
+
+.footer-socials button{
+    margin: 5px;
+    width: 2.5rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+}
+
+.footer-socials button.youtube {
+  background-image: url('/icons/youtube.svg');
+  background-color: var(--youtube);
+}
+
+.footer-socials button.instagram {
+  background-image: url('/icons/instagram.svg');
+  background-color: var(--instagram);
+}
+
+.footer-socials button.bluesky {
+  background-image: url('/icons/bluesky.svg');
+  background-color: var(--bluesky);
+}
+
+.footer-socials button.telegram {
+  background-image: url('/icons/telegram.svg');
+  background-color: var(--telegram);
+}
+
+.footer-socials button.github {
+  background-image: url('/icons/github.svg');
+  background-color: var(--github);
+}
+
+.footer-navigation a {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+@media (max-width: 978px) {
+  .footer-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-about {
+    gap: 0.5rem;
+    margin: 0;
+    min-width: 0;
+  }
+
+  .footer-navigation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem 1rem;
+    margin: 0;
+  }
+
+  .footer-navigation a {
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
+    margin: 0;
+  }
+
+  .footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .footer-socials button {
+    flex: 0 0 2.5rem;
+    margin: 0;
+  }
+
+  .footer-about a[href^="mailto:"] {
+    overflow-wrap: anywhere;
+  }
+}

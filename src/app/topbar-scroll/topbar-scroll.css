@@ -1,0 +1,60 @@
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0rem;
+  font-size: 0.9rem;
+  z-index: 5;
+}
+
+@media (min-width: 978px) {
+  .topbar{
+    font-size: 1.25rem;
+  }
+}
+
+/* Scrolling ticker */
+.scroll {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  font-family: "GoodLookingFont";
+  color: var(--accent-color2);
+  font-weight: bold;
+}
+
+.scroll-content {
+  display: flex;
+  width: max-content;
+
+  animation: scroll-left 15s linear infinite;
+  will-change: transform;
+}
+
+.scroll-content span {
+  flex-shrink: 0;
+  padding-right: 1rem;
+}
+
+.scroll:hover .scroll-content {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-content {
+    animation: none;
+  }
+}

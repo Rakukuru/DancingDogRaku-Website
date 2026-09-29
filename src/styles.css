@@ -1,1 +1,157 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import fonts here */
+/* Space Grotesk and sans-serif as default are used by default */ 
+/*@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');*/
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.woff2');
+}
+/* 'GoodLookingFont' is used in...*/ 
+@font-face {
+  font-family: 'GoodLookingFont';
+  src: url('/fonts/GoodLookingFont.woff2');
+}
+
+@font-face {
+  font-family: 'AudioNugget';
+  src: url('/fonts/AudioNugget.woff2');
+}
+
+@font-face {
+  font-family: 'Granix';
+  src: url('/fonts/Granix.otf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+  white-space: normal;
+}
+
+.body{
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+app-content-block article {
+    padding: 0.5rem 1.5rem;
+    border-color: var(--accent-color); border-style: outset;
+    border-radius: 25px;
+    border-width: 10px;
+    white-space: pre-wrap
+}
+
+li{
+    margin-left: 2rem;
+}
+
+/* LIGHT and DARK themes! */
+:root {
+  --accent-color: #01ffff;
+  --accent-color2: #045a94;
+  --teal: #6eefde;
+  --orange: #ff8a00;
+  --bg-color: rgb(255, 255, 255);
+  --bg-color-secondary: #f0f0f0;
+  --bg-color-tertiary: #c4c4c4;
+  --bg-color-quaternary: #969696;
+  --text-color: #222222;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: #f5f5f5;
+
+  /*Social variables*/
+  --youtube: #f56e7e;
+  --instagram: #f5a06e;
+  --bluesky: #6e9bf5;
+  --telegram: #6eeaf5;
+  --github: #ad6ef5;
+}
+
+body.dark-theme {
+  --bg-color: #383857;
+  --accent-color2: rgb(7, 25, 59);
+  --bg-color-secondary: #2E2E48;
+  --bg-color-tertiary: #1C1C2C;
+  --bg-color-quaternary: #0A0A10;
+  --text-color: #f5f5f5;
+  --nav-bg: rgba(38, 38, 57, 0.95);
+  --card-bg: #383857;
+}
+
+/* ------------ Block Styling ------------*/
+.block {
+    width: 100%;
+    padding: 7% 5%;
+    background-color: var(--bg-color);
+    display: block;
+    position: relative;
+    z-index: 0;
+    overflow: visible; /* ensure shadows aren't clipped */
+}
+
+  .block:has(.lightbox-overlay) {
+    z-index: 10000;
+  }
+
+
+@media (min-width: 978px) {
+    .block {
+        padding: 3% 10%;
+    }
+}
+/* Stronger, directional shadows using pseudo-elements. These give more control
+     over spread and direction than `box-shadow`. Keep or remove as needed. */
+.block::before,
+.block::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.block::before {
+    /* upward-spreading top shadow */
+    top: -40px;
+    height: 40px;
+    background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+    filter: blur(12px);
+}
+
+.block::after {
+    /* downward-spreading bottom shadow */
+    top: 0px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent);
+    filter: blur(12px);
+}
+
+/* ------------ Table Styling (Resume) ------------*/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--accent-color2);
+}
+
+

@@ -1,0 +1,126 @@
+.instagram-widget {
+	width: min(100% - 2rem, 72rem);
+	margin: 0 auto;
+}
+
+.widget-heading {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 1.25rem;
+}
+
+.instagram-mark {
+	display: grid;
+	width: 3rem;
+	height: 3rem;
+	place-items: center;
+	border: 2px solid var(--text-color);
+	border-radius: 50%;
+	background: linear-gradient(135deg, #feda75, #fa7e1e 35%, #d62976 65%, #4f5bd5);
+}
+
+.instagram-mark img {
+	width: 1.75rem;
+	height: 1.75rem;
+	filter: brightness(0) invert(1);
+}
+
+.eyebrow {
+	margin: 0;
+	color: var(--accent-color2);
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+h2 {
+	margin: 0;
+	color: var(--text-color);
+	font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.profile-link {
+	margin-left: auto;
+	color: var(--accent-color2);
+	font-size: 0.9rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.profile-link:hover,
+.profile-link:focus-visible {
+	text-decoration: underline;
+}
+
+.instagram-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.5rem;
+}
+
+.instagram-tile {
+	position: relative;
+	display: block;
+	aspect-ratio: 4 / 5;
+	overflow: hidden;
+	background: var(--bg-color-tertiary);
+}
+
+.instagram-tile img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 180ms ease;
+}
+
+.tile-overlay {
+	position: absolute;
+	inset: auto 0 0;
+	padding: 0.75rem;
+	background: linear-gradient(transparent, rgb(0 0 0 / 0.78));
+	color: #fff;
+	font-size: 0.78rem;
+	opacity: 0;
+	transform: translateY(0.5rem);
+	transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.instagram-tile:hover img,
+.instagram-tile:focus-visible img {
+	transform: scale(1.04);
+}
+
+.instagram-tile:hover .tile-overlay,
+.instagram-tile:focus-visible .tile-overlay {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.instagram-tile:focus-visible,
+.profile-link:focus-visible {
+	outline: 3px solid var(--accent-color);
+	outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+	.instagram-widget {
+		width: min(100% - 1rem, 72rem);
+		padding-top: 1.5rem;
+	}
+
+	.widget-heading {
+		flex-wrap: wrap;
+	}
+
+	.profile-link {
+		width: 100%;
+		margin-left: 3.75rem;
+		margin-top: -0.5rem;
+	}
+
+	.instagram-grid {
+		gap: 0.25rem;
+	}
+}

@@ -1,0 +1,203 @@
+figcaption {
+    font-size: 1rem;
+    color: white;
+}
+
+.gallery-wrapper {
+    position: relative;
+    width: 100%;
+    height: 52vw;
+    overflow: hidden;
+}
+
+
+/* Frame area */
+.decorator-container {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto; /* centers it */
+    z-index: 0;
+    background-image: url('../../../public/drawings/Fondo tele2.png');
+    background-position: center;
+    background-size: 83%;
+    background-repeat: no-repeat;
+}
+
+/* TV frame */
+.decorator {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+.decorator-text {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    text-align: center;
+    width: auto;
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-color);
+    color: var(--accent-color);
+    border-radius: 0.4rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 978px) {
+    .decorator-text {
+        font-size: 1.2rem;
+        top: 0%;
+
+    }
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.carousel-button {
+    border: none;
+    background: var(--bg-color);
+    color: var(--accent-color);
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: background 0.2s ease;
+}
+
+@media (max-width: 978px) {
+    .carousel-controls {
+        bottom: 0%;
+        gap: 80px;
+    }
+
+    .carousel-button {
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+    }
+}
+
+.carousel-button:hover,
+.carousel-button:focus-visible {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.9);
+    outline-offset: 2px;
+}
+
+/* Carousel overlays inside frame */
+.decorator-container ngb-carousel {
+    position: absolute;
+    /* adjust these values to fit the screen opening */
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+
+}
+
+/* Keep images inside the screen */
+.decorator-container ngb-carousel img {
+    border-radius: 15%;
+    width: 100%;
+    max-height: 40vw !important;
+    object-fit: contain; /* or contain*/
+    cursor: pointer;
+}
+
+.lightbox-overlay {
+    position: fixed;
+    width: 100vw;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 1.5rem;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 95vw;
+    width: min(90rem, 100%);
+    max-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 4rem rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    border: none;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.lightbox-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Use fade transitions instead of slide in the ngb-carousel */
+.decorator-container ngb-carousel.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity .6s ease-in-out;
+    transform: none !important;
+    backface-visibility: hidden;
+}
+
+.decorator-container ngb-carousel.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
+.decorator-container ngb-carousel.carousel-fade .carousel-item-next,
+.decorator-container ngb-carousel.carousel-fade .carousel-item-prev,
+.decorator-container ngb-carousel.carousel-fade .carousel-item-next.carousel-item-left,
+.decorator-container ngb-carousel.carousel-fade .carousel-item-prev.carousel-item-right {
+    transform: none !important;
+}

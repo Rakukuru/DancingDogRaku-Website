@@ -1,0 +1,91 @@
+h1{
+    text-align: center;
+    color: var(--accent-color);
+    font-style: bold;
+    margin-left: 0;
+    font-family: "AudioNugget";
+}
+
+.decorator {
+    display: block;
+    position: relative;
+    margin: -1rem auto 0;
+    object-fit: contain;
+    width: 80%;
+    height: auto;
+}
+
+/*----------- Content with images --------*/
+.content {
+    position: relative;
+}
+
+.content.has-image {
+    padding-right: 25%;
+}
+
+.content.has-image.image-left {
+    padding-right: 0;
+    padding-left: 25%;
+}
+
+.content-image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 27%;
+    height: auto;
+    max-height: 90%;
+    margin: 0;
+    transform: translateY(-50%);
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none;
+    padding: 0.5rem 0.5rem;
+    border-color: var(--accent-color); 
+    border-style: outset;
+    border-radius: 25px;
+    border-width: 10px;
+    background: color-mix(in srgb, var(--bg-color) 70%, transparent);
+}
+
+.content-image.image-left {
+    right: auto;
+    left: 0;
+}
+
+.content > article,
+.content > p {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 978px) {
+    .content.has-image,
+    .content.has-image.image-left {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .content-image {
+        position: relative;
+        display: block;
+        width: 60%;
+        margin: -1.5rem auto 0;
+        transform: none;
+    }
+
+    .content-image.image-left {
+        left: auto;
+    }
+}
+
+
+:host ::ng-deep article img {
+  display: block;
+  margin-inline: auto;
+  max-width: 100%;
+  max-height: 350px;
+  height: auto;
+}

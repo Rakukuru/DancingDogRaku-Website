@@ -1,0 +1,23 @@
+<div class="instagram-widget">
+	<div class="widget-heading">
+		<div class="instagram-mark" aria-hidden="true">
+			<img ngSrc="icons/instagram.svg" width="28" height="28" alt="" />
+		</div>
+		<div>
+			<p class="eyebrow">Follow along</p>
+			<h2>Instagram</h2>
+		</div>
+		<a class="profile-link" [href]="profileUrl" target="_blank" rel="noopener noreferrer">
+			@dancingdograku
+		</a>
+	</div>
+
+	<div class="instagram-grid" aria-label="Recent Instagram photos">
+		@for (image of images; track image.src) {
+			<a class="instagram-tile" [href]="image.url" target="_blank" rel="noopener noreferrer">
+				<img [ngSrc]="image.src" width="400" height="500" [alt]="image.alt" />
+				<span class="tile-overlay" aria-hidden="true">View on Instagram</span>
+			</a>
+		}
+	</div>
+</div>

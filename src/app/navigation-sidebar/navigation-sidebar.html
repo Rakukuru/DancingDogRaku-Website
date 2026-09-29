@@ -1,0 +1,26 @@
+<div class="sidebar-shell">
+  <nav class="side-nav" [class.is-collapsed]="isSidebarCollapsed()" aria-label="Main navigation">
+    <!-- When parsing a multiple element link, remember to use [routerLink] instead of just routerLink-->
+    <!-- Afterwards, parameters go inside [] and if it's # leading, you need to pass it as FRAGMENT -->
+    <a [routerLink]="['/']" fragment="home">Home</a>
+    <a [routerLink]="['/']" fragment="about">About</a>
+    <a [routerLink]="['/']" fragment="instagram">Videos</a>
+    <a [routerLink]="['/']" fragment="gallery">Gallery</a>
+    <a routerLink="/sonas">My sonas</a>
+    <a routerLink="/experience">My CV</a>
+
+    <button
+      class="theme-toggle"
+      (click)="toggleTheme()">
+      {{ isDarkMode ? '☀️' : '🌙' }}
+    </button>
+    <button
+      class="sidebar-toggle"
+      type="button"
+      (click)="toggleSidebar()"
+      [attr.aria-label]="isSidebarCollapsed() ? 'Show navigation' : 'Hide navigation'"
+      [attr.aria-expanded]="!isSidebarCollapsed()">
+      {{ isSidebarCollapsed() ? '‹' : '›' }}
+    </button>
+  </nav>
+</div>
