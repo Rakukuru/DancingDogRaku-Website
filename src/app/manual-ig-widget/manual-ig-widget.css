@@ -1,5 +1,6 @@
 .instagram-widget {
-	width: min(100% - 2rem, 72rem);
+	width: min(100% - 1rem, 72rem);
+	padding-top: 1.5rem;
 	margin: 0 auto;
 }
 
@@ -8,6 +9,7 @@
 	align-items: center;
 	gap: 0.75rem;
 	margin-bottom: 1.25rem;
+	flex-wrap: wrap;
 }
 
 .instagram-mark {
@@ -42,9 +44,9 @@ h2 {
 }
 
 .profile-link {
-	margin-left: auto;
+	visibility: collapse;
 	color: var(--accent-color2);
-	font-size: 0.9rem;
+	font-size: 1.8rem;
 	font-weight: 700;
 	text-decoration: none;
 }
@@ -56,7 +58,7 @@ h2 {
 
 .instagram-grid {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 0.5rem;
 }
 
@@ -104,20 +106,24 @@ h2 {
 	outline-offset: 3px;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 978px) {
+	.instagram-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
 	.instagram-widget {
-		width: min(100% - 1rem, 72rem);
-		padding-top: 1.5rem;
+		width: min(100% - 2rem, 72rem);
 	}
 
 	.widget-heading {
-		flex-wrap: wrap;
-	}
+        flex-wrap: nowrap;
+    }
 
 	.profile-link {
-		width: 100%;
-		margin-left: 3.75rem;
-		margin-top: -0.5rem;
+		visibility: visible;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: 0;
 	}
 
 	.instagram-grid {

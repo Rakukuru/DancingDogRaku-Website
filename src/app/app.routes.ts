@@ -2,11 +2,11 @@ import { Routes } from '@angular/router';
 import { MainPage } from './pages/main-page/main-page';
 
 export const routes: Routes = [
-/*     {
+    {
         path: '', //<your-domain>
         component: MainPage,
         title: 'Welcome to my website!'
-    }, */
+    },
     {
         path: 'experience',
         loadComponent: () => import('./pages/experience-page/experience-page').then(mod => mod.ExperiencePage), //Lazy Load Experience Page

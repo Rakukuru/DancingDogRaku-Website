@@ -1,0 +1,39 @@
+h2 {
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.software-header th {
+    background-color: #2c99ec;
+}
+
+.events-header th {
+    background-color: #33e190;
+}
+
+.dance-header th {
+    background-color: #b350f5;
+}
+
+.other-header th {
+    background-color: #f19225;
+}
+
+:host-context(body.dark-theme) .software-header th {
+    background-color: #095d9e;
+}
+
+:host-context(body.dark-theme) .events-header th {
+    background-color: #079a55;
+}
+
+:host-context(body.dark-theme) .dance-header th {
+    background-color: #6a14a4;
+}
+
+:host-context(body.dark-theme) .other-header th {
+    background-color: #bc6b0d;
+}

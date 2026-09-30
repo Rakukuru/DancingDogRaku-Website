@@ -113,27 +113,27 @@
 }
 
 .carousel-socials button.youtube {
-  background-image: url('/icons/youtube.svg');
+  background-image: url('../../../public/icons/youtube.svg');
   background-color: var(--youtube);
 }
 
 .carousel-socials button.instagram {
-  background-image: url('/icons/instagram.svg');
+  background-image: url('../../../public/icons/instagram.svg');
   background-color: var(--instagram);
 }
 
 .carousel-socials button.bluesky {
-  background-image: url('/icons/bluesky.svg');
+  background-image: url('../../../public/icons/bluesky.svg');
   background-color: var(--bluesky);
 }
 
 .carousel-socials button.telegram {
-  background-image: url('/icons/telegram.svg');
+  background-image: url('../../../public/icons/telegram.svg');
   background-color: var(--telegram);
 }
 
 .carousel-socials button.github {
-  background-image: url('/icons/github.svg');
+  background-image: url('../../../public/icons/github.svg');
   background-color: var(--github);
 }
 

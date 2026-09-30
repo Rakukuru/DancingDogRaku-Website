@@ -36,6 +36,19 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## Deploying to GitHub Pages
+
+This project is configured to generate a static site for GitHub Pages. To build and publish it manually, run these commands from the project root:
+
+```bash
+npx ng build --configuration production --base-href "/DancingDogRaku-Website/"
+npx gh-pages -d dist/MyWebsite/browser
+```
+
+The first command creates the production site with the repository's Pages path. The second publishes the generated files to the `gh-pages` branch. On the first deployment, configure the repository in **Settings → Pages** to deploy from the `gh-pages` branch and the `/(root)` folder.
+
+Run both commands again whenever you want to publish updates. GitHub Pages serves the site at <https://rakukuru.github.io/DancingDogRaku-Website/>.
+
 ## Running unit tests
 
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:

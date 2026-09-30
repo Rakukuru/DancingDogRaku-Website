@@ -5,7 +5,7 @@
 .footer-wrapper {
     display: flex;
     flex-direction: row;
-    background-color: var(--accent-color2);
+    background-color: var(--footer-color);
     padding: 1% 15%;
     width: 100%;
 }
@@ -38,27 +38,27 @@
 }
 
 .footer-socials button.youtube {
-  background-image: url('/icons/youtube.svg');
+  background-image: url('../../../public/icons/youtube.svg');
   background-color: var(--youtube);
 }
 
 .footer-socials button.instagram {
-  background-image: url('/icons/instagram.svg');
+  background-image: url('../../../public/icons/instagram.svg');
   background-color: var(--instagram);
 }
 
 .footer-socials button.bluesky {
-  background-image: url('/icons/bluesky.svg');
+  background-image: url('../../../public/icons/bluesky.svg');
   background-color: var(--bluesky);
 }
 
 .footer-socials button.telegram {
-  background-image: url('/icons/telegram.svg');
+  background-image: url('../../../public/icons/telegram.svg');
   background-color: var(--telegram);
 }
 
 .footer-socials button.github {
-  background-image: url('/icons/github.svg');
+  background-image: url('../../../public/icons/github.svg');
   background-color: var(--github);
 }
 
