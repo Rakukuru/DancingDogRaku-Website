@@ -28,13 +28,13 @@
 
 html, body {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   white-space: normal;
 }
 
 @media (min-width: 978px) {
   html, body {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 

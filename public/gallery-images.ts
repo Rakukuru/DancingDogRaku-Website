@@ -26,25 +26,25 @@ export const galleryImages = [
     credits: '📸: JhayrPictures (Instagram)'
   },
   {
-    id: 3,
+    id: 4,
     src: 'photos/nfc2025_1.jpg',
     alt: 'Rakukuru dancing at Paws on Ice during NordicFuzzCon 2026',
     credits: '📸: Pinsel Photography'
   },
   {
-    id: 4,
+    id: 5,
     src: 'photos/nfc2025_3.jpg',
     alt: 'Pistacho and Rakukuru dancing together at Paws on Ice during NordicFuzzCon 2026',
     credits: '📸: Pinsel Photography'
   },
   {
-    id: 5,
+    id: 6,
     src: 'photos/riluxoriaCloseUp.jpg',
     alt: 'Riluxoria showing the back of their paws in an adorable close up photo',
     credits: ''
   },
   {
-    id: 5,
+    id: 7,
     src: 'photos/nfc2024_1.JPG',
     alt: 'Fidget and Riluxoria taking a selfie at NordicFuzzCon 2025',
     credits: ''

@@ -19,7 +19,7 @@
 	place-items: center;
 	border: 2px solid var(--text-color);
 	border-radius: 50%;
-	background: linear-gradient(135deg, #feda75, #fa7e1e 35%, #d62976 65%, #4f5bd5);
+	background-color: var(--instagram);
 }
 
 .instagram-mark img {
