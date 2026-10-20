@@ -41,7 +41,7 @@ This will compile your project and store the build artifacts in the `dist/` dire
 This project is configured to generate a static site for GitHub Pages. To build and publish it manually, run these commands from the project root:
 
 ```bash
-npx ng build --configuration production --base-href "/DancingDogRaku-Website/"
+npx ng build --configuration production --base-href "/"
 npx gh-pages -d dist/MyWebsite/browser
 ```
 
