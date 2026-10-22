@@ -41,12 +41,13 @@ h1{
     object-fit: contain;
     z-index: 1;
     pointer-events: none;
-    padding: 0.5rem 0.5rem;
+    padding: 1rem 1rem;
     border-color: var(--accent-color); 
     border-style: outset;
     border-radius: 25px;
     border-width: 10px;
-    background: color-mix(in srgb, var(--bg-color) 70%, transparent);
+    background: color-mix(in srgb, rgb(17, 195, 215) 15%, transparent);
+    backdrop-filter: blur(10px);
 }
 
 .content-image.image-left {
