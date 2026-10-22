@@ -1,3 +1,7 @@
+app-content-block article{
+    padding: 3px;
+}
+
 h2 {
     text-decoration: underline;
     font-weight: bold;
@@ -36,4 +40,10 @@ h2 {
 
 :host-context(body.dark-theme) .other-header th {
     background-color: #bc6b0d;
+}
+
+.table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
