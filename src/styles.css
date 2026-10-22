@@ -52,7 +52,8 @@ app-content-block article {
     border-color: var(--accent-color); border-style: outset;
     border-radius: 25px;
     border-width: 10px;
-    white-space: pre-wrap
+    white-space: pre-wrap;
+    background-color: rgba(17, 195, 215, 0.2);
 }
 
 li{
