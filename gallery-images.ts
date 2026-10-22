@@ -3,50 +3,68 @@
 export const galleryImages = [
   {
     id: 0,
-    src: 'photos/rakuIbercon.jpg',
+    src: 'photos/rakuIbercon.webp',
     alt: 'Rakukuru skipping around the Fursuit Parade at Ibercon 2026',
     credits: ''
   },
     {
     id: 1,
-    src: 'photos/rakuibercon2.jpg',
+    src: 'photos/rakuibercon2.webp',
     alt: 'Rakukuru helping at the Fursuit Parade at Ibercon 2026',
     credits: ''
   },
   {
     id: 2,
-    src: 'photos/rakuFursuit1.jpg',
-    alt: 'Rakukuru looking very cutely at the camera in a close-up photo',
-    credits: '📸: JhayrPictures (Instagram)'
-  },
-  {
-    id: 3,
-    src: 'photos/rakuFursuit2.jpg',
-    alt: 'Rakukuru standing in a futuristic corridor and showing their gay little paws at the camera',
-    credits: '📸: JhayrPictures (Instagram)'
-  },
-  {
-    id: 4,
-    src: 'photos/nfc2025_1.jpg',
+    src: 'photos/nfc2025_1.webp',
     alt: 'Rakukuru dancing at Paws on Ice during NordicFuzzCon 2026',
     credits: '📸: Pinsel Photography'
   },
   {
-    id: 5,
-    src: 'photos/nfc2025_3.jpg',
+    id: 3,
+    src: 'photos/nfc2025_3.webp',
     alt: 'Pistacho and Rakukuru dancing together at Paws on Ice during NordicFuzzCon 2026',
     credits: '📸: Pinsel Photography'
   },
   {
-    id: 6,
-    src: 'photos/riluxoriaCloseUp.jpg',
+    id: 4,
+    src: 'photos/riluxoriaCloseUp.webp',
     alt: 'Riluxoria showing the back of their paws in an adorable close up photo',
     credits: ''
   },
   {
-    id: 7,
-    src: 'photos/nfc2024_1.JPG',
+    id: 5,
+    src: 'photos/nfc2024_1.webp',
     alt: 'Fidget and Riluxoria taking a selfie at NordicFuzzCon 2025',
+    credits: '📸: Quoll Marten'
+  },
+  {
+    id: 6,
+    src: 'photos/nfc2024_3.webp',
+    alt: 'Riluxoria at NordicFuzzCon 2025 Fursuit Parade',
+    credits: '📸: Fiend.photos'
+  },
+  {
+    id: 7,
+    src: 'photos/ruckusSuit.webp',
+    alt: 'Ruckus posing for the camera with a short cropped jacket',
     credits: ''
+  },
+  {
+    id: 8,
+    src: 'hero-photos/RakukuruFursuit1.webp',
+    alt: 'Rakukuru in a futuristic ship, slightly bent and pointing towards the viewer in a very "first contact with extraterrestrial life" kind of way.',
+    credits: '📸: Jhayrpictures'
+  },
+    {
+    id: 9,
+    src: 'hero-photos/RakukuruFursuit2.webp',
+    alt: 'Still in the same futuristic ship, now Rakukuru is showing you a big closed door full of colored buttons, while standing in front of it. Not the best way to showcase the door...',
+    credits: '📸: Jhayrpictures'
+  },
+  {
+    id: 10,
+    src: 'hero-photos/RakukuruFursuit3.webp',
+    alt: 'Rakukuru posing in the corridor of the ship, with one leg up and the opposite hand doing a cutesy peace sing near their eye.',
+    credits: '📸: Jhayrpictures'
   },
 ] as const;
