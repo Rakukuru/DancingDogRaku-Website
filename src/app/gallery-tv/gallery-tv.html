@@ -1,9 +1,7 @@
 <div class="gallery-wrapper">
-  <!--<img class="background" src="drawings/Fondo tele2.png" alt="Fondo tele2 background" />-->
-
-    <div class="decorator-container">
+    <div class="decorator-container" [style.background-image]="'url(&quot;' + teleBG.src + '&quot;)'">
         <h1 class="decorator-text">Gallery</h1>
-        <img class="decorator" src="drawings/Tele sin fondo2.png" alt="Decorator overlay" />
+        <img class="decorator" [src]="teleBorder.src" [alt]="teleBorder.alt" />
         
         <ngb-carousel #galleryCarousel="ngbCarousel" class="carousel carousel-fade" [showNavigationIndicators]="false" [showNavigationArrows]="false">
             @for(image of images; track image.id){

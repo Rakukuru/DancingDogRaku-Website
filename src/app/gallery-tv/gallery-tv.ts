@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgbCarousel, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { galleryImages } from '../../../public/gallery-images';
+import { decorators } from '../../../public/decorators';
 
 @Component({
   selector: 'app-gallery-tv',
@@ -10,7 +11,9 @@ import { galleryImages } from '../../../public/gallery-images';
 })
 export class GalleryTv {
   protected readonly images = galleryImages;
-
+  teleBorder = decorators[4];
+  teleBG = decorators[5];
+  
   protected lightboxVisible = false;
   protected selectedImageIndex = 0;
 

@@ -18,7 +18,7 @@ figcaption {
     height: 100%;
     margin: 0 auto; /* centers it */
     z-index: 0;
-    background-image: url('../../../public/drawings/Fondo tele2.png');
+    background-image: url('../../../public/decorators/Fondo tele2.webp');
     background-position: center;
     background-size: 83%;
     background-repeat: no-repeat;
